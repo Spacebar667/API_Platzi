@@ -6,7 +6,7 @@ function Inicio() {
     return (
       <div style={{ padding: '20px' }}>
         <h1>Bienvenido a la tienda Platzi Fake Store</h1>
-        <p>Explorá productos, categorías y usuarios usando el menú 👇</p>
+        <p>Explora productos, categorías y usuarios usando el menú 👇</p>
       </div>
     );
   }
