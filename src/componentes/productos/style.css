@@ -33,4 +33,43 @@
     font-size: 16px;
     color: #333;
   }
+
+  .c-buscador {
+    padding: 10px 15px;
+    width: 250px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    margin: 20px auto;
+    display: block;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: border-color 0.3s ease;
+  }
+  
+  .c-buscador:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  .c-filtro {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .c-filtro select {
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .c-filtro select:focus {
+    border-color: #28a745;
+    outline: none;
+  }
   

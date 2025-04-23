@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react'
-
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './style.css';
 
 function Usuarios() {
@@ -15,7 +15,7 @@ function Usuarios() {
   return (
     <section className="c-lista-u">
       {data.map((user) => (
-        <div className="c-lista-usuario" key={user.id}>
+        <Link to={`/usuarios/${user.id}`} key={user.id} className="c-lista-usuario">
           <img
             src={user.avatar}
             alt={`Avatar de ${user.name}`}
@@ -26,7 +26,7 @@ function Usuarios() {
           <p><strong>Nombre:</strong> {user.name}</p>
           <p><strong>Email:</strong> {user.email}</p>
           <p><strong>Creado:</strong> {new Date(user.creationAt).toLocaleDateString()}</p>
-        </div>
+        </Link>
       ))}
     </section>
   );
