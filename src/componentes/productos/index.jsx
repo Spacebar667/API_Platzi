@@ -30,7 +30,8 @@ function Productos() {
 
   // 🔍 Filtrado por búsqueda
   const resultados = productosFiltradosPorCategoria.filter(producto =>
-    producto.title.toLowerCase().includes(busqueda.toLowerCase())
+    producto.title.toLowerCase().includes(busqueda.toLowerCase()) ||
+    producto.id.toString().includes(busqueda) // Agregado: busca por ID
   );
 
   return (
