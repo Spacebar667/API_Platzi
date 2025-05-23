@@ -1,0 +1,147 @@
+/* style.css */
+
+.pf-container {
+  max-width: 600px;
+  margin: 1.5rem auto;
+  padding: 1.5rem 2rem;
+  background-color: #fefefe;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgb(0 0 0 / 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+}
+
+.pf-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.5rem;
+}
+
+.pf-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #34495e;
+}
+
+.pf-input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 1rem;
+  border: 1.5px solid #bdc3c7;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.pf-input:focus {
+  border-color: #2980b9;
+  outline: none;
+  box-shadow: 0 0 6px rgb(41 128 185 / 0.4);
+  background-color: #f0f8ff;
+}
+
+.pf-input[disabled] {
+  background-color: #eaeaea;
+  color: #7f8c8d;
+  cursor: not-allowed;
+}
+
+.pf-button {
+  padding: 12px 15px;
+  width: 100%;
+  background-color: #3498db;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 1.5rem;
+}
+
+.pf-button:hover {
+  background-color: #2980b9;
+}
+
+.pf-section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.3rem;
+}
+
+.pf-image-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.pf-image-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+}
+
+.pf-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+}
+
+.pf-image-button {
+  padding: 6px 10px;
+  background-color: #e74c3c;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pf-image-button:hover {
+  background-color: #c0392b;
+}
+
+.pf-input-inline {
+  width: 80%;
+  padding: 10px 12px;
+  margin-right: 8px;
+  border: 1.5px solid #bdc3c7;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.pf-input-inline:focus {
+  border-color: #2980b9;
+  outline: none;
+  box-shadow: 0 0 6px rgb(41 128 185 / 0.4);
+  background-color: #f0f8ff;
+}
+
+.pf-logout-button {
+  background-color: #e67e22;
+  margin-bottom: 3rem;
+}
+
+.pf-logout-button:hover {
+  background-color: #d35400;
+}

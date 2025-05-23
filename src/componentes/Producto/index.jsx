@@ -1,15 +1,13 @@
 import { useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { AppContext } from '../../contexto/contexto';
 
 import "./style.css";
 
 function Producto() {
   const { id } = useParams();
   const [producto, setProducto] = useState(null);
-  const [favoritos, setFavoritos] = useState(() => {
-    const local = localStorage.getItem('favoritos');
-    return local ? JSON.parse(local) : [];
-  });
+  const { favoritos, setFavoritos } = useContext(AppContext);
 
   const esFavorito = favoritos.some(p => p.id === Number(id));
 
@@ -25,11 +23,16 @@ function Producto() {
     if (esFavorito) {
       actualizados = favoritos.filter(p => p.id !== Number(id));
     } else {
-      actualizados = [...favoritos, { id: producto.id, title: producto.title }];
+      actualizados = [...favoritos, { 
+      id: producto.id, 
+      title: producto.title, 
+      image: producto.images?.[0] 
+    }];
+
     }
 
     setFavoritos(actualizados);
-    localStorage.setItem('favoritos', JSON.stringify(actualizados));
+    localStorage.setItem('favoritos', JSON.stringify(actualizados)); // opcional
   };
 
   if (!producto) return <p>Cargando producto...</p>;

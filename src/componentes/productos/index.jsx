@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext} from 'react';
+import { AppContext } from '../../contexto/contexto';
 import { Link } from 'react-router-dom';
 import Filtro from '../Filtro';
 import './style.css';
