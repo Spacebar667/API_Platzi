@@ -4,13 +4,17 @@
     bottom: 0;
     left: 0;
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    justify-content: flex-start; /* para scroll horizontal */
+    gap: 10px;
     width: 100%;
-    padding: 15px 0;
+    padding: 15px 10px;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
     z-index: 100;
+    overflow-x: auto; /* <- permite scroll horizontal */
+    white-space: nowrap;
+    scrollbar-width: none; /* oculta scroll en Firefox */
 }
+
 
 .c-link {
     text-decoration: none;
@@ -29,4 +33,9 @@
 .c-link.active {
     background-color: #333;
     color: white;
+}
+
+/* Oculta el scrollbar en Chrome/Safari */
+.c-menu::-webkit-scrollbar {
+    display: none;
 }
